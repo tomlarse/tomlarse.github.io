@@ -13,7 +13,7 @@ Every time I get audio through my own speakers the sound degrades quite a bit, s
 I also did not get the audio from the video I played, I'll try messing around with audio settings to see how it can be done.
 
 [youtube https://www.youtube.com/watch?v=wGvkL9a2DiE&amp;rel=0]
-{% include youtubePlayer.html id=wGvkL9a2DiE %}
+{% include youtubePlayer.html id="wGvkL9a2DiE" %}
 
 If anyone wants to see the broadcast meeting itself, it is available here, although I don't know for how long.
 https://join-emea.broadcast.skype.com/advania.no/a05795dc-e498-4b20-a38c-292f9abcdd67
