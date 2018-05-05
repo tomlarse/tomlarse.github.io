@@ -8,7 +8,7 @@ categories: [Lync, RBAC, script, Unified Communications]
 ---
 I wrote a script to start a remote Lync management shell session based on <a href="http://blogs.technet.com/b/csps/archive/2010/06/16/qsremoteaccess.aspx">this</a> post. This of course is a big bloated way to do it (it can be done as a <a href="http://blog.powershell.no/2010/12/05/lync-server-2010-remote-administration/">twoliner</a>), but I need the PS training :P
 
-[sourcecode language="powershell"]
+```
  ##########################################################################################################################
  # New-RemoteCSPSsession.ps1
  #
@@ -69,4 +69,4 @@ $session = &amp; $executioncontext.invokecommand.NewScriptBlock($cmdstring)
 Import-PSSession $session
  }
 
-[/sourcecode]
+```

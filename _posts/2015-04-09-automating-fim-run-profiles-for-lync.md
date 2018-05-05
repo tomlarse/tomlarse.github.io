@@ -27,15 +27,15 @@ So I've created this powershell function that will take a sorted array of Manage
 
 Simply load the functions in your current powershell session and run
 
-[sourcecode language="powershell"]
+```
 CsFimMaRun -ManagementAgents @(&quot;ResourceForest&quot;,&quot;UserForest1&quot;,&quot;UserForest2&quot;) -Type Full
-[/sourcecode]
+```
 
 or
 
-[sourcecode language="powershell"]
+```
 CsFimMaRun -ManagementAgents @(&quot;ResourceForest&quot;,&quot;UserForest1&quot;,&quot;UserForest2&quot;) -Type Delta
-[/sourcecode]
+```
 
 and the run profiles should be executed in order. For automation just add one of the above to the end of the script and run that in a windows task scheduler. One delta update a day is often enough, but if the environment is very dynamic you might want to run it more often.
 

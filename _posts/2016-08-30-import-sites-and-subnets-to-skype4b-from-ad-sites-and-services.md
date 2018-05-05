@@ -18,13 +18,13 @@ Usage:
 
 Run the .ps1 and then
 
-[sourcecode language="powershell"]
+```
 Import-ADSitesAndSubnets -Regionid Someregion
-[/sourcecode]
+```
 
 or
 
-[sourcecode language="powershell"] Import-ADSitesAndSubnets -UseSiteAsRegion [/sourcecode]
+``` Import-ADSitesAndSubnets -UseSiteAsRegion ```
 
 And the script:
 

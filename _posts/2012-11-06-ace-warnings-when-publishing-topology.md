@@ -16,9 +16,9 @@ and also later in the log
 
 This means that not all ACEs are ready after the forest prep, for whatever reason. Just run a
 
-[sourcecode language="powershell"]
+```
 Enable-CsAdForest
-[/sourcecode]
+```
 
 which should reset the permissions, and you should be fine.
 

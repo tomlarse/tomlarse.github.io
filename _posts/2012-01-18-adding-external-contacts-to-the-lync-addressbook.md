@@ -19,7 +19,7 @@ Download latest version <a href="https://github.com/tomlarse/New-SipContact/rel
 
 Or copy the sourcecode:
 
-[sourcecode language="powershell"]
+```
 
 #####################################################################################
  # New-SipContact.ps1
@@ -49,11 +49,11 @@ $SIPContact = $SIPContactOU.create(&quot;contact&quot;, &quot;cn=&quot; + $cn)
  $SIPContact.Put(&quot;telephoneNumber&quot;, $telephoneNumber)
  }
  $SIPContact.setInfo()
- [/sourcecode]
+ ```
 
 I've also created one to bulk create contacts from a .csv file
 
-[sourcecode language="powershell"]
+```
 
 #####################################################################################
  # New-SipContactBulk.ps1
@@ -86,7 +86,7 @@ $SIPContact = $SIPContactOU.create(&quot;contact&quot;, &quot;cn=&quot; + $conta
  $SIPContact.setInfo()
  }
 
-[/sourcecode]
+```
 
 The example csv file contains this:
 
@@ -94,5 +94,5 @@ The example csv file contains this:
 John Spencer,,john.spencer@litwareinc.com
 Spencer John,Spencer Displayname John,spencer.john@litwareinc.com
 
-[/sourcecode]
+```
 

@@ -10,15 +10,15 @@ In a freshly set up Skype for Business hybrid environment we got this error afte
 <blockquote>HostedMigration 510 error : the user could not be moved because the tenant has not been enabled for shared SIP address spaces</blockquote>
 After verifying that both the tenant and onprem environment is actually set up for shared address spaces with
 
-[sourcecode language="powershell"]
+```
 Get-CsTenantFederationConfiguration
-[/sourcecode]
+```
 
 and
 
-[sourcecode language="powershell"]
+```
 Get-CsHostingProvider
-[/sourcecode]
+```
 
 the issue is still there.
 
@@ -26,8 +26,8 @@ I did find a <a href="http://blankmanblog.com/general-news/tips-tricks/hostedmi
 
 It turned out that the user were homed in a child domain and the FE pool in the root domain. The problem was solved by running the Move-CsUser Cmdlet with the -DomainController parameter as well, like this:
 
-[sourcecode language="powershell"]
+```
 Move-CsUser -Identity user@contoso.com -Target sipfed.online.lync.com -Credential $cred -HostedMigrationOverrideUrl &quot;https://adminXX.online.lync.com/HostedMigration/hostedmigrationService.svc&quot; -DomainController dc.contoso.com
-[/sourcecode]
+```
 
 Remember that your HostedMigrationOverrideUrl will probably be different, just log in to the SFBO admin portal to get yours.</pre>

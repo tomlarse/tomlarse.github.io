@@ -8,11 +8,11 @@ categories: [Lync 2010, Lync Online, Office 365, Oneliners, Unified Communicatio
 ---
 To federate with Lync Online/Office 365, run:
 
-[sourcecode language="powershell"]
+```
  New-CSHostingProvider –identity LyncOnline –ProxyFqdn sipfed.online.lync.com –Enabled $True
 
 Enable-CSTopology
- [/sourcecode]
+ ```
 
 
 Here's how to do it using GUI: <a href="http://techietom.co.uk/blog/2011/04/how-to-enable-office365-lync-online-to-federate-with-lync-on-prem/">http://techietom.co.uk/blog/2011/04/how-to-enable-office365-lync-online-to-federate-with-lync-on-prem/</a>

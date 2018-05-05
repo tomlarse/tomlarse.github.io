@@ -18,9 +18,9 @@ The global settings for sending TNEF to remote domains is default set to false. 
 
 To resolve this, the sending party needs to enable sending of TNEF attachments to the recieving party. This is done via the RemoteDomain settings, and can be turned on for i.e contoso.com like this:
 
-[sourcecode language="powershell"]
+```
 New-RemoteDomain -DomainName contoso.com -Name Contoso
 Set-RemoteDomain -Identity Contoso -TNEFEnabled $true
-[/sourcecode]
+```
 
 It is also possible to set TNEF on for all remote domains, but be careful with this as TNEF can cause issues if the recieving end does not use Exchange.

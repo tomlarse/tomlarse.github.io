@@ -8,9 +8,9 @@ categories: [Lync, powershell, Unified Communications]
 ---
 <div>After adding a static route to Lync (for example when adding a <a href="http://www.codesalot.com/2011/script-new-ciscotelepresenceintegration-ps1/">CTP integration</a>) you can use the following command to show the route:</div>
 
-[sourcecode language="powershell"]
+```
  Get-CsStaticRoutingConfiguration Service:Registrar:lspool01.contoso.com
- [/sourcecode]
+ ```
 
 <pre>Identity : Service:Registrar:lspool01.contoso.com
 Route    : {MatchUri=video.contoso.com;MatchOnlyPhoneUri=False;Enabled=True;ReplaceHostInRequestUri=False}</pre>

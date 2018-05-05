@@ -14,6 +14,6 @@ My colleague Marjus made <a href="http://marjuss.wordpress.com/2013/05/03/basic-
 
 So, if you want to keep your WAC server for yourself, remember to add all domains where you host servers that should be able to use the WAC server to the allow list by using the <a href="http://technet.microsoft.com/en-us/library/jj219459.aspx" title="New-OfficeWebAppsHost" target="_blank">New-OfficeWebAppsHost</a> Cmdlet. The wildcard * is assumed on all domains in the allow list, so subdomains are supported automatically. You only need to add the server domain(s), not necessarily the same as the SIP domain(s). 
 
-[sourcecode language="powershell"]
+```
 New-OfficeWebAppsHost -Domain &quot;contoso.com&quot;
-[/sourcecode]
+```

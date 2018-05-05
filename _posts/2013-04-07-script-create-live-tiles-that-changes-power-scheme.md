@@ -12,7 +12,7 @@ I've thought about making a live tile to do this, so I wrote a PowerShell script
 
 Download <a href="http://codesalot.files.wordpress.com/2013/04/create-powerschemetiles.zip">Create-PowerSchemeTiles.zip</a> or copy the sourcecode:
 
-[sourcecode language="powershell"]
+```
 
 #requires -Version 3.0
 
@@ -80,4 +80,4 @@ foreach ($plan in $plans) {
     Write-Debug $planName
     CreatePowerSchemeTile -SchemeGUID $planGuid -SchemeName $planName
 }
-[/sourcecode]
+```

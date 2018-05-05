@@ -8,7 +8,7 @@ categories: [Cisco Telepresence, Lync, powershell, Unified Communications]
 ---
 Script to enable routes from Lync to VCS Control: ---- Edit: After the VCS X7 release, the integration is done a bit differently. I'll try to get an update to the script out in the near future.
 
-[sourcecode language="powershell"]
+```
 ######################################################################################################################################################################################
 # New-CiscoTelepresenceIntegration.ps1
 #
@@ -145,4 +145,4 @@ Out-File -FilePath $logfile -InputObject $a -Append
 
 Write-Host &quot;Logfile: &quot; $logFile &quot;is written.&quot;
 }
-[/sourcecode]
+```

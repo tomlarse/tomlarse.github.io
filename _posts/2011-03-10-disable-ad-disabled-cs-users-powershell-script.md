@@ -56,6 +56,6 @@ if ($logFile -ne &quot;&quot;) {
  }
  }
 
-[/sourcecode]
+```
 
 </div>

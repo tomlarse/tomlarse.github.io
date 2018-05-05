@@ -12,7 +12,7 @@ This also means that the API has been updated, so PsAcano needed an update as we
 
 The release can be downloaded from <a href="https://github.com/tomlarse/PsAcano/releases/latest" target="_blank">here </a>or you can run
 
-[sourcecode language="powershell"]iex (New-Object Net.WebClient).DownloadString(&quot;https://gist.githubusercontent.com/tomlarse/5f43bbe0e763cea379ca/raw/83054527ca5e5433e466f55106ea145bec330435/installmodule&quot;)[/sourcecode]
+```iex (New-Object Net.WebClient).DownloadString(&quot;https://gist.githubusercontent.com/tomlarse/5f43bbe0e763cea379ca/raw/83054527ca5e5433e466f55106ea145bec330435/installmodule&quot;)```
 
 in powershell to install the module.
 

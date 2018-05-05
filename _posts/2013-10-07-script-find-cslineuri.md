@@ -8,9 +8,9 @@ categories: [Lync, Lync 2010, Lync 2013, powershell, tools, Unified Communicatio
 ---
 Often I need to find a certain LineUri in Lync. LineUris are most of the time configured on users, so a simple
 
-[sourcecode language="powershell"]
+```
 Get-CsUser -filter {LineUri -like &quot;tel:&lt;e164number&gt;*&quot;}
-[/sourcecode]
+```
 
 
 will give you the result you are looking for. But a user is not the only object in Lync that can have a LineUri, and if you in addition don't know what object has the LineUri you might need to search through all the objects. This script does just that. Sort of an opposite to Ståle Hansens <a href="http://msunified.net/lyncdownloads/script-list-unusednumbers-ps1/" title="list-unusednumbers" target="_blank">List-UnusedNumbers.ps1</a>.
@@ -21,7 +21,7 @@ The script will also list <span style="text-decoration:underline;">all</span> ob
 
 Download <a href="http://codesalot.files.wordpress.com/2013/10/find-cslineuri.zip" title="Find-CsLineUri.zip" target="_blank">Find-CSLineUri.zip</a> or copy the sourcecode:
 
-[sourcecode language="powershell"]
+```
 ####################################################################################################
 # Find-CsLineUri.ps1
 #
@@ -74,4 +74,4 @@ if ($csums -ne $null){ListContents -Heading &quot;Exchange UM Contact&quot; -lis
 if ($csdialins -ne $null){ListContents -Heading &quot;Dial-in Conference Number&quot; -list $csdialins}
 if ($cstrusteds -ne $null){ListContents -Heading &quot;Trusted Application Endpoint&quot; -list $cstrusteds}
 if ($csrgses -ne $null){ListContents -Heading &quot;Response Group Workflow&quot; -list $csrgses}
-[/sourcecode]
+```
