@@ -7,10 +7,10 @@ comments: true
 categories: [Cisco, E20, Tandberg, video conferencing]
 ---
 To reset Cisco E20 to factory defaults, press:
-<pre>** -&gt; PC/Presentation -&gt; ##</pre>
+´´´** -&gt; PC/Presentation -&gt; ##´´´
 in less than three seconds
 
 or
 
 log in to the TSH CLI via telnet or SSH and enter the following:
-<pre><code>xCommand systemunit Configuration ResetToFactoryDefaults Settings: All</code></pre>
+´´´<code>xCommand systemunit Configuration ResetToFactoryDefaults Settings: All</code>´´´

@@ -27,14 +27,14 @@ If we look at the Desktop Sharing page in the <a href="http://www.microsoft.com
 When a federated user or a conference is involved, the media is sent through TCP via the AVMCU on the edge server. So the issue seems to be with the outbound TCP 50000-59999 port range traversing the firewall.
 
 The call fails with the following reason in the BYE:
-<pre style="margin:0;font-family:Calibri;font-size:11pt;">Ms-client-diagnostics: 23; reason="Call failed to establish due to a media connectivity failure when one endpoint is internal and the other is remote"</pre>
+<pre style="margin:0;font-family:Calibri;font-size:11pt;">Ms-client-diagnostics: 23; reason="Call failed to establish due to a media connectivity failure when one endpoint is internal and the other is remote"´´´
 <p style="margin:0;font-family:Calibri;font-size:11pt;"></p>
 <p style="margin:0;font-family:Calibri;font-size:11pt;">The ICE warning is 0x8000100, which if looked up in the Reskit documentation or the <a href="https://gallery.technet.microsoft.com/office/ICE-Warning-Flag-Decoder-97058ef3" target="_blank">ICE Warning Flags decoder</a>, means this</p>
 <p style="margin:0;font-family:Calibri;font-size:11pt;"></p>
 
 <pre style="margin:0;font-family:Calibri;font-size:11pt;"><strong>TCP NAT connectivity failed
 </strong>This flag is expected. If local-to-local connectivity succeeded, the TCP NAT connectivity check may not have been tried. Or there is no direct TCP connection possible.
-TCP NAT connectivity failing may result in an ICE protocol failure.</pre>
+TCP NAT connectivity failing may result in an ICE protocol failure.´´´
 <p style="margin:0;font-family:Calibri;font-size:11pt;"></p>
 <p style="margin:0;font-family:Calibri;font-size:11pt;">Another clue pointing to the TCP media port range.</p>
 <p style="margin:0;font-family:Calibri;font-size:11pt;"></p>

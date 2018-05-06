@@ -23,5 +23,5 @@ Here's an example on how to add a call (call leg) to a coSpace using the module:
 {% gist b1f6fe180b831d18a89a %}
 
 Then you can just run
-<pre>Add-Participant -CoSpace df2d3e44-91ff-48f4-aeca-ffd951641ebe -SipUri anne.wallace@contoso.com</pre>
+´´´Add-Participant -CoSpace df2d3e44-91ff-48f4-aeca-ffd951641ebe -SipUri anne.wallace@contoso.com´´´
 to add a participant.

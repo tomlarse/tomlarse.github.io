@@ -30,4 +30,4 @@ It turned out that the user were homed in a child domain and the FE pool in the 
 Move-CsUser -Identity user@contoso.com -Target sipfed.online.lync.com -Credential $cred -HostedMigrationOverrideUrl &quot;https://adminXX.online.lync.com/HostedMigration/hostedmigrationService.svc&quot; -DomainController dc.contoso.com
 ```
 
-Remember that your HostedMigrationOverrideUrl will probably be different, just log in to the SFBO admin portal to get yours.</pre>
+Remember that your HostedMigrationOverrideUrl will probably be different, just log in to the SFBO admin portal to get yours.´´´
