@@ -14,11 +14,11 @@ You can resolve this by telling windows not to scale those programs, like I've s
 
 I'll be going back to playing with my Surface now!
 
-[caption id="attachment_431" align="alignnone" width="460"]<a href="http://codesalot.files.wordpress.com/2013/02/fuzzyspotify.png"><img class=" wp-image-431 " alt="This is what Spotify looked like before" src="http://codesalot.files.wordpress.com/2013/02/fuzzyspotify.png" width="460" height="446" /></a> This is what Spotify looked like before[/caption]
+<a href="http://codesalot.files.wordpress.com/2013/02/fuzzyspotify.png"><img class=" wp-image-431 " alt="This is what Spotify looked like before" src="http://codesalot.files.wordpress.com/2013/02/fuzzyspotify.png" width="460" height="446" /></a> This is what Spotify looked like before
 
-[caption id="attachment_433" align="alignnone" width="531"]<a href="http://codesalot.files.wordpress.com/2013/02/rightclick.png"><img class="size-full wp-image-433" alt="Right click twice and choose properties" src="http://codesalot.files.wordpress.com/2013/02/rightclick.png" width="531" height="281" /></a> Right click twice and choose properties[/caption]
+<a href="http://codesalot.files.wordpress.com/2013/02/rightclick.png"><img class="size-full wp-image-433" alt="Right click twice and choose properties" src="http://codesalot.files.wordpress.com/2013/02/rightclick.png" width="531" height="281" /></a> Right click twice and choose properties
 
-[caption id="attachment_430" align="alignnone" width="500"]<a href="http://codesalot.files.wordpress.com/2013/02/compat.png"><img class="size-full wp-image-430 " alt="On the Compatability tab, check the &quot;Disable display scaling on high DPI settings&quot; option " src="http://codesalot.files.wordpress.com/2013/02/compat.png" width="500" height="644" /></a> On the Compatability tab, check the "Disable display scaling on high DPI settings" option
-<div class="mceTemp"><dl class="wp-caption alignright" id="attachment_432" style="width:470px;"><dt class="wp-caption-dt"><a href="http://codesalot.files.wordpress.com/2013/02/notfuzzyspotify.png"><img class=" wp-image-432 " alt="And the result looks much better!" src="http://codesalot.files.wordpress.com/2013/02/notfuzzyspotify.png" width="460" height="454" /></a></dt><dd class="wp-caption-dd">And the result looks much better![/caption]
+<a href="http://codesalot.files.wordpress.com/2013/02/compat.png"><img class="size-full wp-image-430 " alt="On the Compatability tab, check the &quot;Disable display scaling on high DPI settings&quot; option " src="http://codesalot.files.wordpress.com/2013/02/compat.png" width="500" height="644" /></a> On the Compatability tab, check the "Disable display scaling on high DPI settings" option
+<div class="mceTemp"><dl class="wp-caption alignright" id="attachment_432" style="width:470px;"><dt class="wp-caption-dt"><a href="http://codesalot.files.wordpress.com/2013/02/notfuzzyspotify.png"><img class=" wp-image-432 " alt="And the result looks much better!" src="http://codesalot.files.wordpress.com/2013/02/notfuzzyspotify.png" width="460" height="454" /></a></dt><dd class="wp-caption-dd">And the result looks much better!
 
 </dd></dl></div>

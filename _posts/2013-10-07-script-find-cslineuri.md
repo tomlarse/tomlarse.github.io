@@ -17,7 +17,7 @@ will give you the result you are looking for. But a user is not the only object 
 
 The script will also list <span style="text-decoration:underline;">all</span> objects that have that LineUri, so it is useful in the situations where you have managed to get the same LineUri on two objects and are getting "SIP/2.0 485 Ambiguous" errors on calls. Normally, if you try to give an object a LineUri that is already configured it will throw a powershell error, but there are situations where it doesn't pick up on it, especially when using the ;ext=1234 addition to the LineUri.
 
-[caption id="attachment_536" align="alignnone" width="300"]<a href="http://codesalot.files.wordpress.com/2013/10/485.png"><img class="size-medium wp-image-536" alt="Lync reports a SIP 485 Ambiguous and a Diagnostic ID 4199 &quot;Multiple users associated with the target phone number&quot;" src="http://codesalot.files.wordpress.com/2013/10/485.png?w=300" width="300" height="26" /></a> Lync reports a SIP 485 Ambiguous and a Diagnostic ID 4199 "Multiple users associated with the target phone number"[/caption]
+<a href="http://codesalot.files.wordpress.com/2013/10/485.png"><img class="size-medium wp-image-536" alt="Lync reports a SIP 485 Ambiguous and a Diagnostic ID 4199 &quot;Multiple users associated with the target phone number&quot;" src="http://codesalot.files.wordpress.com/2013/10/485.png?w=300" width="300" height="26" /></a> Lync reports a SIP 485 Ambiguous and a Diagnostic ID 4199 "Multiple users associated with the target phone number"
 
 Download <a href="http://codesalot.files.wordpress.com/2013/10/find-cslineuri.zip" title="Find-CsLineUri.zip" target="_blank">Find-CSLineUri.zip</a> or copy the sourcecode:
 
