@@ -28,6 +28,6 @@ or
 
 And the script:
 
-[gist]0970a59d99b3ea7be31ca8ca70b838f1[/gist]
+{ % gist 0970a59d99b3ea7be31ca8ca70b838f1 % }
 
 &nbsp;

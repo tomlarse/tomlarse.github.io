@@ -12,4 +12,4 @@ to do a cold start of the pool, instead of the services starting automatically.
 
 Use these oneliners to set the services to manual startup and back again to automatic afterwords.
 
-[gist]2b516ddcbde1341541de[/gist]
+{ % gist 2b516ddcbde1341541de % }

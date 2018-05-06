@@ -10,4 +10,4 @@ There are some situations described in this kb, https://support.microsoft.com/e
 
 In the KB Microsoft describes a workaround, but it involves quite a lot of steps, so I made a small Powershell script that will do the job for you. The script needs to run in the context of the user with the problem, as it uses outlook to get the LegacyDN attribute.
 
-[gist]b13b08f193ece95b02db7ea133573241[/gist]
+{ % gist b13b08f193ece95b02db7ea133573241 % }

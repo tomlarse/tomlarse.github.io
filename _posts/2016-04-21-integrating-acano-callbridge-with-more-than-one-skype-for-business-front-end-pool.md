@@ -22,7 +22,7 @@ and so on. If you have only one FE pool in your SfB environment you are now done
 
 If you happen to have more than one FE pool in your environment though, you will have to add all of them to the Acano configuration. It is only possible to add 1 through the web interface though, so in this case they will have to be added one by one through the API. You can use Postman or some other REST client for this, or you can use the <a href="http://blog.codesalot.com/2015/12/04/manage-acano-server-with-powershell-psacano-version-0-2-released/" target="_blank">PsAcano </a>powershell module like this:
 
-[gist]1422e0d55a80260c1d8f641e191d8542[/gist]
+{ % gist 1422e0d55a80260c1d8f641e191d8542 % }
 
 You can use the same service accounts for all FE pools.
 
