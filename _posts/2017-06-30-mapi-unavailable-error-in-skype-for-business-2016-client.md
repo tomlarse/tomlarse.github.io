@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "MAPI unavailable" error in Skype for Business 2016 client
+title: ! '"MAPI unavailable" error in Skype for Business 2016 client'
 date: 2017-06-30 07:18
 author: tomlarse
 comments: true
