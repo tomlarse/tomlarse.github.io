@@ -10,4 +10,4 @@ To get support for Lync and Skype for Business on Windows Server 2012 R2, you ne
 
 To create this key, use the following powershell oneliner:
 
-{ % gist 3172ef0e5a981da53534 % }
+{% gist 3172ef0e5a981da53534 %}
