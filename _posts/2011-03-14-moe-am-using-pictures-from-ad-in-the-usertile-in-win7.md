@@ -1,6 +1,6 @@
 ---
 layout: post
-title: moe.am: Using pictures from AD in the usertile in win7
+title: ! "moe.am: Using pictures from AD in the usertile in win7"
 date: 2011-03-14 13:33
 author: tomlarse
 comments: true

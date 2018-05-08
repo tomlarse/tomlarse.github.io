@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Script: Set-CsKhiCollectorSet.ps1
+title: ! "Script: Set-CsKhiCollectorSet.ps1"
 date: 2015-02-10 14:59
 author: tomlarse
 comments: true

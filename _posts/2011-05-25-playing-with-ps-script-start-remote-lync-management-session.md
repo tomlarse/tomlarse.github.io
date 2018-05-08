@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Playing with PS: Script: Start remote Lync management session
+title: ! "Playing with PS: Script: Start remote Lync management session"
 date: 2011-05-25 15:21
 author: tomlarse
 comments: true

@@ -13,6 +13,7 @@ In TMS, go to: <strong>Phone Book &gt; Manage External Source</strong>
 If there is an external source there that is called "Provisioning Source", chances are that the phone book was installed correctly. If not, add a new external source and select "TANDBERG Provisioning Directory" as source type.
 
 The rest of the fields should be like this:
+```
 <table border="1" cellspacing="0" cellpadding="0" width="744">
 <tbody>
 <tr>
@@ -66,6 +67,8 @@ The rest of the fields should be like this:
 <td width="331" valign="top"><strong>displayName </strong></td>
 </tr>
 </tbody></table>
+```
+
 With this setup, movi users are added to the phone book on the format "&lt;firstname&gt; &lt;lastname&gt; &lt;provisioningprofile&gt;". I will try some different settings to see if I can filter and change the format in the phonebook. I will add this in a later post.
 
 After this, create a new phonebook and connect it to the new external source.

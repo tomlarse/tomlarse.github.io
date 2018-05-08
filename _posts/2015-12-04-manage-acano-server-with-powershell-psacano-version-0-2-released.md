@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Manage Acano server with Powershell: PSAcano version 0.2 released
+title: ! "Manage Acano server with Powershell: PSAcano version 0.2 released"
 date: 2015-12-04 11:48
 author: tomlarse
 comments: true
