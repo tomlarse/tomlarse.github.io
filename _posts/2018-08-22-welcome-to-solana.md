@@ -3,9 +3,9 @@ title: Welcome to Solana
 teaser: These sample posts are provided as a template for creating your own content.
 category: intro
 tags: [markdown, workflow, foss]
-reddit_post: 'https://www.reddit.com/r/Jekyll/comments/6258ln/welcome_to_solana/'
+reddit_post: 'https://www.reddit.com/r/codesalot/comments/997srf/first_test_post/'
 featured_comments:
-  - url: 'https://www.reddit.com/r/Jekyll/comments/6258ln/welcome_to_solana/dfkw5k2/'
+  - url: 'https://www.reddit.com/r/codesalot/comments/997srf/first_test_post/e4lklbo'
 ---
 
 GitHub Pages uses a Markdown engine called <dfn>kramdown</dfn> for formatting text posts. kramdown is a superset of Markdown, meaning:
