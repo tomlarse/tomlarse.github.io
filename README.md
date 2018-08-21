@@ -1,120 +1,135 @@
-> March, 2016: If you're on an old version of Jekyll Now and run into a) build warnings or b) syntax highlighting issues caused by [Jekyll 3 and GitHub Pages updates](https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0), just :sparkles:[update your _config.yml](https://github.com/barryclark/jekyll-now/pull/445/files):sparkles: and you'll be set!
+Solana – a Wholesome, Flat, Sunshiny Jekyll Theme
+===============================================
 
-# Jekyll Now
+**Solana** is a theme for the [Jekyll][jk] static site generator. [View the demo][demo].
 
-**Jekyll** is a static site generator that's perfect for GitHub hosted blogs ([Jekyll Repository](https://github.com/jekyll/jekyll))
+### Features
 
-**Jekyll Now** makes it easier to create your Jekyll blog, by eliminating a lot of the up front setup.
+* Compatible with GitHub Pages
+* Supports categories & tags
+* Responsive design
+* Lightweight (no jQuery, Bootstrap, etc.) 
+* Obfuscates email addresses for protection against email harvesting bots
+* Comments via outbound links to Reddit
 
-- You don't need to touch the command line
-- You don't need to install/configure ruby, rvm/rbenv, ruby gems :relaxed:
-- You don't need to install runtime dependencies like markdown processors, Pygments, etc
-- If you're on Windows, this will make setting up Jekyll a lot easier
-- It's easy to try out, you can just delete your forked repository if you don't like it
+![](https://raw.githubusercontent.com/rlue/i/master/solana/responsive.gif)
 
-In a few minutes you'll be set up with a minimal, responsive blog like the one below giving you more time to spend on writing epic blog posts!
+![](https://raw.githubusercontent.com/rlue/i/master/solana/device_mockup.png)
 
-![Jekyll Now Theme Screenshot](/images/jekyll-now-theme-screenshot.jpg "Jekyll Now Theme Screenshot")
+Installation
+------------
 
-## Quick Start
+### Cloning Solana to your GitHub Pages
 
-### Step 1) Fork Jekyll Now to your User Repository
+1. Prepare a [new GitHub repository][new] named after your GitHub Pages address (`<username>.github.io`). Do not initialize with a `README`, `.gitignore`, or license.
+2. Clone this repository:
 
-Fork this repo, then rename the repository to yourgithubusername.github.io.
+        $ git clone https://github.com/rlue/jekyll-solana.git
 
-Your Jekyll blog will often be viewable immediately at <https://yourgithubusername.github.io> (if it's not, you can often force it to build by completing step 2)
+3. Associate your local copy with the GitHub Pages repo you just created:
 
-![Step 1](/images/step1.gif "Step 1")
+        $ cd solana
+        $ git remote rm origin
+        $ git remote add origin https://github.com/<username>/<username>.github.io
 
-### Step 2) Customize and view your site
+4. In `_config.yml`, replace the `baseurl` site variable (`/jekyll-solana`) with an empty string (`''`):
 
-Enter your site name, description, avatar and many other options by editing the _config.yml file. You can easily turn on Google Analytics tracking, Disqus commenting and social icons here too.
+        $ sed -i "s/\/jekyll-solana/''            /" _config.yml     # on UNIX
+        $ sed -i '' "s/\/jekyll-solana/''            /" _config.yml  # on Mac
 
-Making a change to _config.yml (or any file in your repository) will force GitHub Pages to rebuild your site with jekyll. Your rebuilt site will be viewable a few seconds later at <https://yourgithubusername.github.io> - if not, give it ten minutes as GitHub suggests and it'll appear soon
+5. And push:
 
-> There are 3 different ways that you can make changes to your blog's files:
+        $ git push -u origin master
 
-> 1. Edit files within your new username.github.io repository in the browser at GitHub.com (shown below).
-> 2. Use a third party GitHub content editor, like [Prose by Development Seed](http://prose.io). It's optimized for use with Jekyll making markdown editing, writing drafts, and uploading images really easy.
-> 3. Clone down your repository and make updates locally, then push them to your GitHub repository.
+In just a few minutes, your site should be live at https://\<username\>.github.io/!
 
-![_config.yml](/images/config.png "_config.yml")
+### Previewing the site on your machine
 
-### Step 3) Publish your first blog post
+1. Ensure that you have a Ruby development environment installed on your machine, including [Bundler][bun].
+2. Install the dependencies:
 
-Edit `/_posts/2014-3-3-Hello-World.md` to publish your first blog post. This [Markdown Cheatsheet](http://www.jekyllnow.com/Markdown-Style-Guide/) might come in handy.
+        $ bundle install
 
-![First Post](/images/first-post.png "First Post")
+3. Start the server: 
 
-> You can add additional posts in the browser on GitHub.com too! Just hit the + icon in `/_posts/` to create new content. Just make sure to include the [front-matter](http://jekyllrb.com/docs/frontmatter/) block at the top of each new blog post and make sure the post's filename is in this format: year-month-day-title.md
+        $ bundle exec jekyll serve
 
-## Local Development
+You should now have a development preview of your site at http://localhost:4000/.
 
-1. Install Jekyll and plug-ins in one fell swoop. `gem install github-pages` This mirrors the plug-ins used by GitHub Pages on your local machine including Jekyll, Sass, etc.
-2. Clone down your fork `git clone https://github.com/yourusername/yourusername.github.io.git`
-3. Serve the site and watch for markup/sass changes `jekyll serve`
-4. View your website at http://127.0.0.1:4000/
-5. Commit any changes and push everything to the master branch of your GitHub user repository. GitHub Pages will then rebuild and serve your website.
+Usage
+-----
 
-## Moar!
+### Customizing the theme
 
-I've created a more detailed walkthrough, [**Build A Blog With Jekyll And GitHub Pages**](http://www.smashingmagazine.com/2014/08/01/build-blog-jekyll-github-pages/) over at the Smashing Magazine website. Check it out if you'd like a more detailed walkthrough and some background on Jekyll. :metal:
+Edit the data in `_config.yml` as appropriate. You’ll also want to rewrite the `README` and replace identifying graphics (`/i/avatar.png`, `/favicon.ico`) with your own.
 
-It covers:
+### Creating new posts
 
-- A more detailed walkthrough of setting up your Jekyll blog
-- Common issues that you might encounter while using Jekyll
-- Importing from Wordpress, using your own domain name, and blogging in your favorite editor
-- Theming in Jekyll, with Liquid templating examples
-- A quick look at Jekyll 2.0’s new features, including Sass/Coffeescript support and Collections
+As with any Jekyll site, posts are generated from Markdown files placed in the `_posts` directory, and must be named according to the following format: `<year>-<month>-<day>-<url_slug>.md`. See the sample posts for examples of how to format rich text in Markdown.
 
-## Jekyll Now Features
+Post content must be preceded by [YAML frontmatter][doc-fm] describing, at a minimum, the title of the post. Keep titles under 60 characters, and teasers under 160.
 
-✓ Command-line free _fork-first workflow_, using GitHub.com to create, customize and post to your blog  
-✓ Fully responsive and mobile optimized base theme (**[Theme Demo](http://jekyllnow.com)**)  
-✓ Sass/Coffeescript support using Jekyll 2.0  
-✓ Free hosting on your GitHub Pages user site  
-✓ Markdown blogging  
-✓ Syntax highlighting  
-✓ Disqus commenting  
-✓ Google Analytics integration  
-✓ SVG social icons for your footer  
-✓ 3 http requests, including your avatar  
+### Categories & Tags
 
-✘ No installing dependencies
-✘ No need to set up local development  
-✘ No configuring plugins  
-✘ No need to spend time on theming  
-✘ More time to code other things ... wait ✓!  
+This repository automatically generates “category” and “tag” archive pages based on labels provided by you in each post’s aforementioned YAML frontmatter. This feature is not available through Jekyll itself or the plugins approved for use on GitHub Pages, so it has been implemented using [git hooks][ghk].
 
-## Questions?
+To enable this feature, run the following command from the project root:
 
-[Open an Issue](https://github.com/barryclark/jekyll-now/issues/new) and let's chat!
+```
+$ ln -s ../../.scripts/pre-commit.rb .git/hooks/pre-commit
+```
 
-## Other forkable themes
+Now, these scripts will run every time you `git commit`, ensuring that your categories and tags pages always stay up-to-date.
 
-You can use the [Quick Start](https://github.com/barryclark/jekyll-now#quick-start) workflow with other themes that are set up to be forked too! Here are some of my favorites:
+#### Explanation
 
-- [Hyde](https://github.com/poole/hyde) by MDO
-- [Lanyon](https://github.com/poole/lanyon) by MDO
-- [mojombo.github.io](https://github.com/mojombo/mojombo.github.io) by Tom Preston-Werner
-- [Left](https://github.com/holman/left) by Zach Holman
-- [Minimal Mistakes](https://github.com/mmistakes/minimal-mistakes) by Michael Rose
-- [Skinny Bones](https://github.com/mmistakes/skinny-bones-jekyll) by Michael Rose
+Solana implements categories and tags as [‘collections’][doc-col], meaning each has its own top-level directory in the project root (`/_category` & `/_tag`). Inside these directories, there is a file representing each category or tag.
 
-## Credits
+These files are generated by `/.scripts/spawn_labels.rb`, based on the `category:` and `tags:` attributes listed at the top of each post. The wrapper script `/.scripts/pre-commit.rb` calls this first script, then adds the newly created files to the git repo.
 
-- [Jekyll](https://github.com/jekyll/jekyll) - Thanks to its creators, contributors and maintainers.
-- [SVG icons](https://github.com/neilorangepeel/Free-Social-Icons) - Thanks, Neil Orange Peel. They're beautiful.
-- [Solarized Light Pygments](https://gist.github.com/edwardhotchkiss/2005058) - Thanks, Edward.
-- [Joel Glovier](http://joelglovier.com/writing/) - Great Jekyll articles. I used Joel's feed.xml in this repository.
-- [David Furnes](https://github.com/dfurnes), [Jon Uy](https://github.com/jonuy), [Luke Patton](https://github.com/lkpttn) - Thanks for the design/code reviews.
-- [Bart Kiers](https://github.com/bkiers), [Florian Simon](https://github.com/vermluh), [Henry Stanley](https://github.com/henryaj), [Hun Jae Lee](https://github.com/hunjaelee), [Javier Cejudo](https://github.com/javiercejudo), [Peter Etelej](https://github.com/etelej), [Ben Abbott](https://github.com/jaminscript), [Ray Nicholus](https://github.com/rnicholus), [Erin Grand](https://github.com/eringrand), [Léo Colombaro](https://github.com/LeoColomb), [Dean Attali](https://github.com/daattali), [Clayton Errington](https://github.com/cjerrington), [Colton Fitzgerald](https://github.com/coltonfitzgerald), [Trace Mayer](https://github.com/sunnankar) - Thanks for your [fantastic contributions](https://github.com/barryclark/jekyll-now/commits/master) to the project!
+### Comments
 
-## Contributing
+As a static site generator, Jekyll has no means to provide a commenting system. For this theme, discussion is outsourced to Reddit, and requires some manual intervention. The process is as follows:
 
-Issues and Pull Requests are greatly appreciated. If you've never contributed to an open source project before I'm more than happy to walk you through how to create a pull request.
+1. Publish a post.
+2. Post it to Reddit.
+3. Include the resulting Reddit URL in the post’s YAML frontmatter:
 
-You can start by [opening an issue](https://github.com/barryclark/jekyll-now/issues/new) describing the problem that you're looking to resolve and we'll go from there.
+        reddit_post: 'https://www.reddit.com/r/Jekyll/comments/6258ln/welcome_to_solana/'
 
-I want to keep Jekyll Now as minimal as possible. Every line of code should be one that's useful to 90% of the people using it. Please bear that in mind when submitting feature requests. If it's not something that most people will use, it probably won't get merged. :guardsman:
+   Now, a link to the Reddit discussion will appear at the end of the post content, before the footnotes (if any).
+
+   ![](https://raw.githubusercontent.com/rlue/i/master/solana/comments-1.png)
+4. If the post receives noteworthy comments that you would like to embed directly on the page, add their permalinks to the YAML frontmatter as well:
+
+        featured_comments:
+          - url: 'https://www.reddit.com/r/Jekyll/comments/6258ln/welcome_to_solana/dfjtxba/'
+            context: false
+            freeze: false
+
+   The `context` flag tells the embed script to include the target comment’s parent. The `freeze` flag prevents live updating in the event that a comment is edited after the fact. Both default to `false`.
+
+   ![](https://raw.githubusercontent.com/rlue/i/master/solana/comments-2.png)
+
+Modifying
+---------
+
+See the official documentation for an overview of [how Jekyll sites are organized][doc-dirs] or [how to get started][doc-qs].
+
+The CSS for this theme was organized following Harry Roberts’ [Inverted Triangle CSS architecture][itcss].
+
+License
+-------
+
+© 2017 Ryan Lue. This project is licensed under the terms of the MIT license.
+
+[jk]: http://jekyllrb.com/
+[demo]: https://solana.ryanlue.com/
+[new]: https://github.com/new
+[bun]: https://github.com/bundler/bundler#installation-and-usage
+[doc-fm]: https://jekyllrb.com/docs/frontmatter/
+[ghk]: http://githooks.com/
+[doc-col]: https://jekyllrb.com/docs/collections/
+[doc-dirs]: https://jekyllrb.com/docs/structure/
+[doc-qs]: https://jekyllrb.com/docs/quickstart/
+[itcss]: https://www.xfive.co/blog/itcss-scalable-maintainable-css-architecture/
