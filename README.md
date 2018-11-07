@@ -1,135 +1,121 @@
-Solana – a Wholesome, Flat, Sunshiny Jekyll Theme
-===============================================
+# Poole
 
-**Solana** is a theme for the [Jekyll][jk] static site generator. [View the demo][demo].
+*The Strange Case of Dr. Jekyll and Mr. Hyde* tells the story of a lawyer investigating the connection of two persons, Dr. Henry Jekyll and Mr. Edward Hyde. Chief among the novel's supporting cast is a man by the name of Mr. Poole, Dr. Jekyll's loyal butler.
 
-### Features
-
-* Compatible with GitHub Pages
-* Supports categories & tags
-* Responsive design
-* Lightweight (no jQuery, Bootstrap, etc.) 
-* Obfuscates email addresses for protection against email harvesting bots
-* Comments via outbound links to Reddit
-
-![](https://raw.githubusercontent.com/rlue/i/master/solana/responsive.gif)
-
-![](https://raw.githubusercontent.com/rlue/i/master/solana/device_mockup.png)
-
-Installation
-------------
-
-### Cloning Solana to your GitHub Pages
-
-1. Prepare a [new GitHub repository][new] named after your GitHub Pages address (`<username>.github.io`). Do not initialize with a `README`, `.gitignore`, or license.
-2. Clone this repository:
-
-        $ git clone https://github.com/rlue/jekyll-solana.git
-
-3. Associate your local copy with the GitHub Pages repo you just created:
-
-        $ cd solana
-        $ git remote rm origin
-        $ git remote add origin https://github.com/<username>/<username>.github.io
-
-4. In `_config.yml`, replace the `baseurl` site variable (`/jekyll-solana`) with an empty string (`''`):
-
-        $ sed -i "s/\/jekyll-solana/''            /" _config.yml     # on UNIX
-        $ sed -i '' "s/\/jekyll-solana/''            /" _config.yml  # on Mac
-
-5. And push:
-
-        $ git push -u origin master
-
-In just a few minutes, your site should be live at https://\<username\>.github.io/!
-
-### Previewing the site on your machine
-
-1. Ensure that you have a Ruby development environment installed on your machine, including [Bundler][bun].
-2. Install the dependencies:
-
-        $ bundle install
-
-3. Start the server: 
-
-        $ bundle exec jekyll serve
-
-You should now have a development preview of your site at http://localhost:4000/.
-
-Usage
 -----
 
-### Customizing the theme
+Poole is the butler for [Jekyll](http://jekyllrb.com), the static site generator. It's designed and developed by [@mdo](https://twitter.com/mdo) to provide a clear and concise foundational setup for any Jekyll site. It does so by furnishing a full vanilla Jekyll install with example templates, pages, posts, and styles.
 
-Edit the data in `_config.yml` as appropriate. You’ll also want to rewrite the `README` and replace identifying graphics (`/i/avatar.png`, `/favicon.ico`) with your own.
+![Poole](https://f.cloud.github.com/assets/98681/1834359/71ae4048-73db-11e3-9a3c-df38eb170537.png)
 
-### Creating new posts
+See Poole in action with [the demo site](http://demo.getpoole.com).
 
-As with any Jekyll site, posts are generated from Markdown files placed in the `_posts` directory, and must be named according to the following format: `<year>-<month>-<day>-<url_slug>.md`. See the sample posts for examples of how to format rich text in Markdown.
+There are currently two official themes built on Poole:
 
-Post content must be preceded by [YAML frontmatter][doc-fm] describing, at a minimum, the title of the post. Keep titles under 60 characters, and teasers under 160.
+* [Hyde](http://hyde.getpoole.com)
+* [Lanyon](http://lanyon.getpoole.com)
 
-### Categories & Tags
+Individual theme feedback and bug reports should be submitted to the theme's individual repository.
 
-This repository automatically generates “category” and “tag” archive pages based on labels provided by you in each post’s aforementioned YAML frontmatter. This feature is not available through Jekyll itself or the plugins approved for use on GitHub Pages, so it has been implemented using [git hooks][ghk].
 
-To enable this feature, run the following command from the project root:
+## Contents
+
+- [Usage](#usage)
+- [Options](#options)
+  - [Rems, `font-size`, and scaling](#rems-font-size-and-scaling)
+- [Development](#development)
+- [Author](#author)
+- [License](#license)
+
+
+## Usage
+
+### 1. Install dependencies
+
+Poole is built on Jekyll and uses its built-in SCSS compiler to generate our CSS. Before getting started, you'll need to install the Jekyll gem:
+
+```bash
+$ gem install jekyll
+```
+
+**Windows users:** Windows users have a bit more work to do, but luckily [@juthilo](https://github.com/juthilo) has your back with his [Run Jekyll on Windows](https://github.com/juthilo/run-jekyll-on-windows) guide.
+
+**Need syntax highlighting?** Poole includes support for Pygments or Rouge, so install your gem of choice to make use of the built-in styling. Read more about this [in the Jekyll docs](http://jekyllrb.com/docs/templates/#code_snippet_highlighting).
+
+### 2a. Quick start
+
+To help anyone with any level of familiarity with Jekyll quickly get started, Poole includes everything you need for a basic Jekyll site. To that end, just download Poole and start up Jekyll.
+
+### 2b. Roll your own Jekyll site
+
+Folks wishing to use Jekyll's templates and styles can do so with a little bit of manual labor. Download Poole and then copy what you need (likely `_layouts/`, `*.html` files, `atom.xml` for RSS, and `public/` for CSS, JS, etc.).
+
+### 3. Running locally
+
+To see your Jekyll site with Poole applied, start a Jekyll server. In Terminal, from `/poole` (or whatever your Jekyll site's root directory is named):
+
+```bash
+$ jekyll serve
+```
+
+Open <http://localhost:4000> in your browser, and voilà.
+
+### 4. Serving it up
+
+If you host your code on GitHub, you can use [GitHub Pages](https://pages.github.com) to host your project.
+
+1. Fork this repo and switch to the `gh-pages` branch.
+  1. If you're [using a custom domain name](https://help.github.com/articles/setting-up-a-custom-domain-with-github-pages), modify the `CNAME` file to point to your new domain.
+  2. If you're not using a custom domain name, **modify the `baseurl` in `_config.yml`** to point to your GitHub Pages URL. Example: for a repo at `github.com/username/poole`, use `http://username.github.io/poole/`. **Be sure to include the trailing slash.**
+3. Done! Head to your GitHub Pages URL or custom domain.
+
+No matter your production or hosting setup, be sure to verify the `baseurl` option file and `CNAME` settings. Not applying this correctly can mean broken styles on your site.
+
+## Options
+
+Poole includes some customizable options, typically applied via classes on the `<body>` element.
+
+
+### Rems, `font-size`, and scaling
+
+Poole is built almost entirely with `rem`s (instead of pixels). `rem`s are like `em`s, but instead of building on the immediate parent's `font-size`, they build on the root element, `<html>`.
+
+By default, we use the following:
+
+```css
+html {
+  font-size: 16px;
+  line-height: 1.5;
+}
+@media (min-width: 38em) {
+  html {
+    font-size: 20px;
+  }
+}
 
 ```
-$ ln -s ../../.scripts/pre-commit.rb .git/hooks/pre-commit
-```
 
-Now, these scripts will run every time you `git commit`, ensuring that your categories and tags pages always stay up-to-date.
+To easily scale your site's typography and components, simply customize the base `font-size`s here.
 
-#### Explanation
 
-Solana implements categories and tags as [‘collections’][doc-col], meaning each has its own top-level directory in the project root (`/_category` & `/_tag`). Inside these directories, there is a file representing each category or tag.
+## Development
 
-These files are generated by `/.scripts/spawn_labels.rb`, based on the `category:` and `tags:` attributes listed at the top of each post. The wrapper script `/.scripts/pre-commit.rb` calls this first script, then adds the newly created files to the git repo.
+Poole has two branches, but only one is used for active development.
 
-### Comments
+- `master` for development.  **All pull requests should be to submitted against `master`.**
+- `gh-pages` for our hosted site, which includes our analytics tracking code. **Please avoid using this branch.**
 
-As a static site generator, Jekyll has no means to provide a commenting system. For this theme, discussion is outsourced to Reddit, and requires some manual intervention. The process is as follows:
+CSS is handled via Jeykll's built-in Sass compiler. Source Sass files are located in `_sass/`, included into `styles.scss`, and compile to `styles.css`.
 
-1. Publish a post.
-2. Post it to Reddit.
-3. Include the resulting Reddit URL in the post’s YAML frontmatter:
+## Author
 
-        reddit_post: 'https://www.reddit.com/r/Jekyll/comments/6258ln/welcome_to_solana/'
+**Mark Otto**
+- <https://github.com/mdo>
+- <https://twitter.com/mdo>
 
-   Now, a link to the Reddit discussion will appear at the end of the post content, before the footnotes (if any).
 
-   ![](https://raw.githubusercontent.com/rlue/i/master/solana/comments-1.png)
-4. If the post receives noteworthy comments that you would like to embed directly on the page, add their permalinks to the YAML frontmatter as well:
+## License
 
-        featured_comments:
-          - url: 'https://www.reddit.com/r/Jekyll/comments/6258ln/welcome_to_solana/dfjtxba/'
-            context: false
-            freeze: false
+Open sourced under the [MIT license](LICENSE.md).
 
-   The `context` flag tells the embed script to include the target comment’s parent. The `freeze` flag prevents live updating in the event that a comment is edited after the fact. Both default to `false`.
-
-   ![](https://raw.githubusercontent.com/rlue/i/master/solana/comments-2.png)
-
-Modifying
----------
-
-See the official documentation for an overview of [how Jekyll sites are organized][doc-dirs] or [how to get started][doc-qs].
-
-The CSS for this theme was organized following Harry Roberts’ [Inverted Triangle CSS architecture][itcss].
-
-License
--------
-
-© 2017 Ryan Lue. This project is licensed under the terms of the MIT license.
-
-[jk]: http://jekyllrb.com/
-[demo]: https://solana.ryanlue.com/
-[new]: https://github.com/new
-[bun]: https://github.com/bundler/bundler#installation-and-usage
-[doc-fm]: https://jekyllrb.com/docs/frontmatter/
-[ghk]: http://githooks.com/
-[doc-col]: https://jekyllrb.com/docs/collections/
-[doc-dirs]: https://jekyllrb.com/docs/structure/
-[doc-qs]: https://jekyllrb.com/docs/quickstart/
-[itcss]: https://www.xfive.co/blog/itcss-scalable-maintainable-css-architecture/
+<3

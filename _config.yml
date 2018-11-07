@@ -1,88 +1,30 @@
-#######################
-# Theme Customization #
-#######################
+# Permalinks
+#
+# Use of `relative_permalinks` ensures post links from the index work properly.
+permalink:           pretty
+relative_permalinks: true
 
-title: blog.codesalot.com                   # used in <title> tag & site header
-author: Tom-Inge Larsen                     # used in a <meta> tag & /feed.xml
-description: >                              # used in a <meta> tag & /feed.xml
-  Hello 911 emergency, there's a handsome guy in my house!
-  Oh wait a second, cancel that. It's only me.
-slogan: Showtime!                           # used in site header, beside title
-avatar: /i/avatar.png                       # used as portrait in site header
-banner: /i/mountains.svg                    # used as background in site header
-url: https://betablog.codesalot.com         # used by plugins to generate feed.xml and sitemap.xml
-baseurl: ''                                 # prepended to all absolute filepaths
-repo: https://github.com/tomlarse/tomlarse.github.io  # used in footer
+# Setup
+title:               Poole
+tagline:             The Jekyll Butler
+url:                 http://getpoole.com
+paginate:            1
+baseurl:             ""
 
-# Objects listed here will appear in the main nav menu.
-# Exceeding four items may cause problems on the desktop (>900px wide) layout.
-nav_menu:
-  - name: Posts
-    url: /
-    icon: /i/icons.svg#posts # icons should be 24x24 px.
-  - name: Projects
-    url: /projects
-    icon: /i/icons.svg#portfolio
-  - name: GitHub
-    url: https://github.com/tomlarse/
-    icon: /i/icons.svg#github
-    outbound: true      # this key sets a link to open in a new window.
-  - name: Contact
-    scheme: mailto      # these keys enable email obfuscation.
-    handle: tom       # you know, to protect you from bots. (handle and domain
-    domain: codesalot.com  # are separated in case bots crawl GitHub repos, too.)
-    icon: /i/icons.svg#email
-
-# Objects listed here will appear on the /projects.html page.
-projects:
-  - title: Solana
-    teaser: A responsive blog template written in Sass and vanilla JavaScript.
-    url: https://github.com/rlue/jekyll-solana
-    role: Creator
-    category: Frontend Dev
-  - title: Cortana
-    teaser: A talking robot. Now available on Google Play?
-    url: https://play.google.com/store/apps/details?id=com.microsoft.cortana
-    role: Core Team
-    category: NLP
-  - title: Rihanna
-    teaser: Possibly another robot. Also available on Google Play.
-    url: https://play.google.com/store/music/artist/Rihanna?id=Arcw2m2ih45qntv3fufub25tyhu
-    role: Contributor
-    category: Algorithmic Composition
-
-#################
-# Site Settings #
-#################
-
-incremental: true
-exclude:
-  - Gemfile
-  - Gemfile.lock
-  - LICENSE
-  - README.md
-  - TODO.md
-
-permalink: /:collection/:path
-
-collections:
-  category: { output: true }
-  tag:      { output: true }
-
-defaults:
-  - scope:  { type:   posts    }
-    values: { layout: post     }
-  - scope:  { type:   tag      }
-    values: { layout: listing  }
-  - scope:  { type:   category }
-    values: { layout: listing  }
-
+# Assets
+#
+# We specify the directory for Jekyll so we can use @imports.
 sass:
-  sass_dir: _assets/css
+  sass_dir:          _sass
+  style:            :compressed
 
-plugins:
-  - jekyll-paginate
-  - jekyll-feed
-  - jekyll-sitemap
+# About/contact
+author:
+  name:              Mark Otto
+  url:               https://twitter.com/mdo
+  email:             markdotto@gmail.com
 
-paginate: 10
+# Custom vars
+version:             2.0.0
+github:
+  repo:              https://github.com/poole/poole
